@@ -1,0 +1,16 @@
+[
+{
+  "modid": "moreeggs",
+  "name": "More Eggs",
+  "description": "To add More eggs and craft about eggs to Minecraft",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["eggy648","Zi_Shang_CS"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
