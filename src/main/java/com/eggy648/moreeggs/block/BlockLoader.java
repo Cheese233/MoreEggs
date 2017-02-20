@@ -13,7 +13,7 @@ public class BlockLoader {
 
     public BlockLoader() {
         GameRegistry.register(fossilDirt.setRegistryName("fossil_dirt").setUnlocalizedName("fossilDirt").setCreativeTab(moreeggs.tab).setHardness(1.5f));
-
+        System.out.println("fossil_dirt registered!");
     }
 
     public static void registerRenders() {
@@ -22,5 +22,6 @@ public class BlockLoader {
 
     public static void registerRender(Block block, int meta) {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta, new ModelResourceLocation(block.getRegistryName(), "inventory"));
+
     }
 }
