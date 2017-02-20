@@ -12,7 +12,7 @@ public class BlockLoader {
     public static Block fossilDirt = new BlockFossilDirt();
 
     public BlockLoader() {
-        GameRegistry.register(fossilDirt.setRegistryName("fossil_dirt").setUnlocalizedName("fossilDirt").setCreativeTab(moreeggs.tab));
+        GameRegistry.register(fossilDirt.setRegistryName("fossil_dirt").setUnlocalizedName("fossilDirt").setCreativeTab(moreeggs.tab).setHardness(1.5f));
 
     }
 
