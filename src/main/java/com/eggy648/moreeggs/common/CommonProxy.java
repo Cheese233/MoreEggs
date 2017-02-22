@@ -17,7 +17,8 @@ public class CommonProxy {
 	public void init(FMLInitializationEvent event)
 	{
 		new CraftingLoader();
-		System.out.println("CraftLoader Initialized");
+		new EventLoader();
+
 	}
 	public void post(FMLPostInitializationEvent event)
 	{
