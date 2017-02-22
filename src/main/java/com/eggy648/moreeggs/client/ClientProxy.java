@@ -14,9 +14,8 @@ public class ClientProxy extends CommonProxy{
 	{
 		super.preInit(event);
 		ItemLoader.registerRenders();
-		System.out.println("Items registered render !");
+		
 		BlockLoader.registerRenders();
-		System.out.println("Blocks registered render  !");
 	}
 	@Override
 	public void init(FMLInitializationEvent event) {

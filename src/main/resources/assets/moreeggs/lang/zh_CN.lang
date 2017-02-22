@@ -2,5 +2,5 @@ item.dirtEgg.name=泥土蛋
 item.ironEgg.name=铁蛋
 item.goldenEgg.name=金蛋
 item.diamondEgg.name=钻石蛋
-tile.eggDirtBlock.name=蛋骸泥土
+tile.fossilDirt.name=化石泥土
 itemGroup.METab=更多蛋
