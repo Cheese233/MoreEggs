@@ -9,7 +9,7 @@ import net.minecraftforge.common.util.EnumHelper;
  * Define Item: DiamondEgg Pickaxe
  */
 public class ItemDiamondEggPickaxe extends ItemPickaxe{
-    public static final Item.ToolMaterial DiamondEgg=EnumHelper.addToolMaterial("DiamondEgg",
+    public static final Item.ToolMaterial DIAMONDEGG_TOOL=EnumHelper.addToolMaterial("DiamondEgg",
             3,
             7000,
             18F,
@@ -17,6 +17,8 @@ public class ItemDiamondEggPickaxe extends ItemPickaxe{
             14
             );
     public ItemDiamondEggPickaxe() {
-        super(DiamondEgg);
+        super(DIAMONDEGG_TOOL);
     }
+
+
 }

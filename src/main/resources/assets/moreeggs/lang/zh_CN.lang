@@ -4,3 +4,10 @@ item.goldenEgg.name=金蛋
 item.diamondEgg.name=钻石蛋
 tile.fossilDirt.name=化石泥土
 itemGroup.METab=更多蛋
+
+item.diamondEggPickaxe=钻石蛋之稿
+
+item.diamondEggHelmet.name=钻石蛋头盔
+item.diamondEggChest.name=钻石蛋护甲
+item.diamondEggLegs.name=钻石蛋护腿
+item.diamondEggBoots.name=钻石蛋之靴

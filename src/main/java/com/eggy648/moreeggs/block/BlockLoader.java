@@ -4,6 +4,7 @@ import com.eggy648.moreeggs.moreeggs;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
@@ -19,6 +20,7 @@ public class BlockLoader {
                     .setUnlocalizedName("fossilDirt")
                     .setCreativeTab(moreeggs.tab).
                     setHardness(1.5f);
+
 
     public BlockLoader() {
         GameRegistry.register(fossilDirt);

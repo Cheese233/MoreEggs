@@ -18,30 +18,66 @@ public class CraftingLoader {
     }
 
     private void registerSmelting() {
-        GameRegistry.addSmelting(BlockLoader.fossilDirt,new ItemStack(ItemLoader.dirtEgg),1.0F);
+        GameRegistry.addSmelting(BlockLoader.fossilDirt, new ItemStack(ItemLoader.dirtEgg), 1.0F);
     }
 
 
     private void registerRecipe() {
         GameRegistry.addRecipe(new ItemStack(ItemLoader.ironEgg)
-                ,"###"
+                , "###"
                 , "#*#"
                 , "###"
                 , '#', Items.IRON_INGOT
                 , '*', ItemLoader.dirtEgg);
         GameRegistry.addRecipe(new ItemStack(ItemLoader.goldenEgg)
-                ," # "
-                ,"#*#"
-                ," # "
-                ,'#',Items.GOLD_INGOT
-                ,'*',ItemLoader.ironEgg
+                , " # "
+                , "#*#"
+                , " # "
+                , '#', Items.GOLD_INGOT
+                , '*', ItemLoader.ironEgg
         );
         GameRegistry.addRecipe(new ItemStack(ItemLoader.diamondEgg)
-                ,"   "
+                , "   "
                 , "#*#"
-                ,"   "
-                ,'#', Items.DIAMOND
-                ,'*',ItemLoader.goldenEgg
+                , "   "
+                , '#', Items.DIAMOND
+                , '*', ItemLoader.goldenEgg
+        );
+        GameRegistry.addRecipe(new ItemStack(ItemLoader.diamondEggPickaxe),
+                "###",
+                " * ",
+                " * ",
+                '#', ItemLoader.diamondEgg,
+                '*', ItemLoader.ironEgg);
+        GameRegistry.addRecipe(new ItemStack(ItemLoader.diamondEggHelmet),
+                "###",
+                "# #",
+                "   ",
+                '#', ItemLoader.diamondEgg
+        );
+        GameRegistry.addRecipe(new ItemStack(ItemLoader.diamondEggChest),
+                "# #",
+                "###",
+                "###",
+                '#', ItemLoader.diamondEgg
+        );
+        GameRegistry.addRecipe(new ItemStack(ItemLoader.diamondEggLegs),
+                "###",
+                "# #",
+                "# #",
+                '#', ItemLoader.diamondEgg
+        );
+        GameRegistry.addRecipe(new ItemStack(ItemLoader.diamondEggBoots),
+                "   ",
+                "# #",
+                "# #",
+                '#', ItemLoader.diamondEgg
+        );
+        GameRegistry.addRecipe(new ItemStack(ItemLoader.diamondEggBoots),
+                "# #",
+                "# #",
+                "   ",
+                '#', ItemLoader.diamondEgg
         );
     }
 

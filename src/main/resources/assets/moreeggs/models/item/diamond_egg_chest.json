@@ -1,0 +1,7 @@
+{
+  "parent":"item/generated",
+  "textures":{
+    "layer0":"moreeggs:items/diamond_egg_chest"
+  }
+
+}

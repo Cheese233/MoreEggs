@@ -21,8 +21,8 @@ public class BlockEvents {
 
             player.dropItemWithOffset(ItemLoader.dirtEgg, 1, 1);
 
-            player.addChatMessage(new TextComponentString("You right clicked a fossild block, and you find a " +
-                    ItemLoader.dirtEgg.getUnlocalizedName() + " in it. It looks will boom! run away quickly!"));
+            player.addChatMessage(new TextComponentString("You right clicked a fossil block, and you "
+                    +"find a dirt Egg in it. It looks will boom! run away quickly!"));
         }
 
     }

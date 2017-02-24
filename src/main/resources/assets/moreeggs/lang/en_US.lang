@@ -2,6 +2,12 @@ item.dirtEgg.name=Dirt Egg
 item.ironEgg.name=Iron Egg
 item.goldenEgg.name=Golden Egg
 item.diamondEgg.name=Diamond Egg
-tile.fossilDirt.name=Fossild Dirt
+tile.fossilDirt.name=Fossil Dirt
 itemGroup.METab=More Eggs
 
+item.diamondEggPickaxe.name=Diamond Egg Pickaxe
+
+item.diamondEggHelmet.name=Diamond Egg Helmet
+item.diamondEggChest.name=Diamond Egg Armour
+item.diamondEggLegs.name=Diamond Egg Legs
+item.diamondEggBoots.name=Diamond Egg Boots
