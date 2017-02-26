@@ -11,3 +11,12 @@ item.diamondEggHelmet.name=钻石蛋头盔
 item.diamondEggChest.name=钻石蛋护甲
 item.diamondEggLegs.name=钻石蛋护腿
 item.diamondEggBoots.name=钻石蛋之靴
+
+death.attack.byPig=%s被猪搞死了
+
+potion.fallProtection=摔落保护
+
+enchantment.firePower=炽能
+
+key.moreeggs.show_time=显示时间
+key.category.moreeggs=更多蛋 按键

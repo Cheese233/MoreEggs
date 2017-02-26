@@ -11,3 +11,12 @@ item.diamondEggHelmet.name=Diamond Egg Helmet
 item.diamondEggChest.name=Diamond Egg Armour
 item.diamondEggLegs.name=Diamond Egg Legs
 item.diamondEggBoots.name=Diamond Egg Boots
+
+death.attack.byPig=%s died because of a angry pig
+
+potion.fallProtection=Fall Protection
+
+enchantment.firePower=Fire Power
+
+key.moreeggs.show_time=Show Time
+key.category.moreeggs=MoreEggs Keys

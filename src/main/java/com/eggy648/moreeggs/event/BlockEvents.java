@@ -1,10 +1,19 @@
 package com.eggy648.moreeggs.event;
 
 import com.eggy648.moreeggs.common.EventLoader;
+import com.eggy648.moreeggs.enchantment.EnchantmentsLoader;
 import com.eggy648.moreeggs.item.ItemLoader;
+import net.minecraft.block.Block;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.text.TextComponentString;
+import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -25,5 +34,43 @@ public class BlockEvents {
                     +"find a dirt Egg in it. It looks will boom! run away quickly!"));
         }
 
+    }
+
+    @SubscribeEvent
+    public void onHarvestBlockDrop(BlockEvent.HarvestDropsEvent event)
+    {
+        if(!event.getWorld().isRemote && event.getHarvester() != null)
+        {
+            ItemStack tool= event.getHarvester().getHeldItemMainhand();
+            if(EnchantmentHelper.getEnchantmentLevel(EnchantmentsLoader.firePower,tool)>0 &&
+                    tool.getItem()!= Items.SHEARS)
+            {
+                for (ItemStack dropItem:event.getDrops())
+                {
+                    ItemStack newStack= FurnaceRecipes.instance().getSmeltingResult(dropItem);
+                    if(newStack!=null)
+                    {
+                        newStack=newStack.copy();//change pointer address
+                        //set newStack count as itemStack's count
+                        event.getDrops().set(event.getDrops().indexOf(dropItem),newStack);
+                    }else if(dropItem!=null)
+                    {
+                        Block block= Block.getBlockFromItem(dropItem.getItem());
+                        boolean b=(block!=null);
+                        if(b&&(
+                                block.isFlammable(event.getWorld(),event.getPos(), EnumFacing.DOWN)
+                                ||block.isFlammable(event.getWorld(),event.getPos(), EnumFacing.EAST)
+                                ||block.isFlammable(event.getWorld(),event.getPos(), EnumFacing.NORTH)
+                                ||block.isFlammable(event.getWorld(),event.getPos(), EnumFacing.SOUTH)
+                                ||block.isFlammable(event.getWorld(),event.getPos(), EnumFacing.WEST)
+                                ||block.isFlammable(event.getWorld(),event.getPos(), EnumFacing.UP)
+                                ))
+                        {
+                            event.getDrops().remove(dropItem);
+                        }
+                    }
+                }
+            }
+        }
     }
 }

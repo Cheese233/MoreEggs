@@ -1,6 +1,8 @@
 package com.eggy648.moreeggs.common;
 
 import com.eggy648.moreeggs.event.BlockEvents;
+import com.eggy648.moreeggs.event.EntityEvents;
+import com.eggy648.moreeggs.event.KeyEvents;
 import com.eggy648.moreeggs.event.LivingEvents;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.BlockPos;
@@ -15,11 +17,12 @@ import net.minecraftforge.fml.common.eventhandler.EventBus;
  * Define & Manage Minecraft Events
  */
 public class EventLoader {
-    public static final EventBus EVENT_BUS= new EventBus();
     public EventLoader() {
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new LivingEvents());
         MinecraftForge.EVENT_BUS.register(new BlockEvents());
+        MinecraftForge.EVENT_BUS.register(new EntityEvents());
+        MinecraftForge.EVENT_BUS.register(new KeyEvents());
     }
 
     @Cancelable
